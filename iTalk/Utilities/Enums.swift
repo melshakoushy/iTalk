@@ -7,3 +7,11 @@
 //
 
 import Foundation
+import UIKit
+
+enum TalkCategory : String {
+    case serious = "serious"
+    case funny = "funny"
+    case crazy = "crazy"
+    case popular = "popular"
+}

@@ -3,25 +3,37 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		46030F6C235A6551000F4957 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46030F6B235A6551000F4957 /* AppDelegate.swift */; };
-		46030F6E235A6551000F4957 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46030F6D235A6551000F4957 /* ViewController.swift */; };
+		46030F6E235A6551000F4957 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46030F6D235A6551000F4957 /* MainVC.swift */; };
 		46030F71235A6551000F4957 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46030F6F235A6551000F4957 /* Main.storyboard */; };
 		46030F73235A6562000F4957 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46030F72235A6562000F4957 /* Assets.xcassets */; };
 		46030F76235A6562000F4957 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46030F74235A6562000F4957 /* LaunchScreen.storyboard */; };
+		46030F7E235A68E3000F4957 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46030F7D235A68E3000F4957 /* GoogleService-Info.plist */; };
+		46030F84235B52E3000F4957 /* AddTalkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46030F83235B52E3000F4957 /* AddTalkVC.swift */; };
+		46030F87235B6036000F4957 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46030F86235B6036000F4957 /* Enums.swift */; };
+		46030F89235B65E7000F4957 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46030F88235B65E7000F4957 /* Constants.swift */; };
+		D539B550DBC752AEC5A0F042 /* Pods_iTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F78267263C87089D0C8C50D8 /* Pods_iTalk.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		46030F68235A6551000F4957 /* iTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46030F6B235A6551000F4957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		46030F6D235A6551000F4957 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		46030F6D235A6551000F4957 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		46030F70235A6551000F4957 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		46030F72235A6562000F4957 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46030F75235A6562000F4957 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46030F77235A6562000F4957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46030F7D235A68E3000F4957 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		46030F83235B52E3000F4957 /* AddTalkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTalkVC.swift; sourceTree = "<group>"; };
+		46030F86235B6036000F4957 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		46030F88235B65E7000F4957 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9F50BAC05D8D71C34AB76A3B /* Pods-iTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTalk.release.xcconfig"; path = "Target Support Files/Pods-iTalk/Pods-iTalk.release.xcconfig"; sourceTree = "<group>"; };
+		DA34F0186407976418C60B7C /* Pods-iTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTalk.debug.xcconfig"; path = "Target Support Files/Pods-iTalk/Pods-iTalk.debug.xcconfig"; sourceTree = "<group>"; };
+		F78267263C87089D0C8C50D8 /* Pods_iTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D539B550DBC752AEC5A0F042 /* Pods_iTalk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +53,8 @@
 			children = (
 				46030F6A235A6551000F4957 /* iTalk */,
 				46030F69235A6551000F4957 /* Products */,
+				AD83A5527E853D320FB003C7 /* Pods */,
+				849575BFFB57F043F52945DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +69,67 @@
 		46030F6A235A6551000F4957 /* iTalk */ = {
 			isa = PBXGroup;
 			children = (
+				46030F85235B601D000F4957 /* Utilities */,
+				46030F81235B524E000F4957 /* Model */,
+				46030F80235B5246000F4957 /* View */,
+				46030F7F235B523C000F4957 /* Controller */,
 				46030F6B235A6551000F4957 /* AppDelegate.swift */,
-				46030F6D235A6551000F4957 /* ViewController.swift */,
 				46030F6F235A6551000F4957 /* Main.storyboard */,
 				46030F72235A6562000F4957 /* Assets.xcassets */,
 				46030F74235A6562000F4957 /* LaunchScreen.storyboard */,
 				46030F77235A6562000F4957 /* Info.plist */,
+				46030F7D235A68E3000F4957 /* GoogleService-Info.plist */,
 			);
 			path = iTalk;
+			sourceTree = "<group>";
+		};
+		46030F7F235B523C000F4957 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				46030F6D235A6551000F4957 /* MainVC.swift */,
+				46030F83235B52E3000F4957 /* AddTalkVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		46030F80235B5246000F4957 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		46030F81235B524E000F4957 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		46030F85235B601D000F4957 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				46030F86235B6036000F4957 /* Enums.swift */,
+				46030F88235B65E7000F4957 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		849575BFFB57F043F52945DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F78267263C87089D0C8C50D8 /* Pods_iTalk.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD83A5527E853D320FB003C7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA34F0186407976418C60B7C /* Pods-iTalk.debug.xcconfig */,
+				9F50BAC05D8D71C34AB76A3B /* Pods-iTalk.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46030F7A235A6562000F4957 /* Build configuration list for PBXNativeTarget "iTalk" */;
 			buildPhases = (
+				5122002823F66CD26E73154C /* [CP] Check Pods Manifest.lock */,
 				46030F64235A6551000F4957 /* Sources */,
 				46030F65235A6551000F4957 /* Frameworks */,
 				46030F66235A6551000F4957 /* Resources */,
+				6D99D80D3FB3D5E4FC8574E9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46030F76235A6562000F4957 /* LaunchScreen.storyboard in Resources */,
+				46030F7E235A68E3000F4957 /* GoogleService-Info.plist in Resources */,
 				46030F73235A6562000F4957 /* Assets.xcassets in Resources */,
 				46030F71235A6551000F4957 /* Main.storyboard in Resources */,
 			);
@@ -130,13 +201,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5122002823F66CD26E73154C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iTalk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D99D80D3FB3D5E4FC8574E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iTalk/Pods-iTalk-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iTalk/Pods-iTalk-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iTalk/Pods-iTalk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		46030F64235A6551000F4957 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46030F6E235A6551000F4957 /* ViewController.swift in Sources */,
+				46030F89235B65E7000F4957 /* Constants.swift in Sources */,
+				46030F6E235A6551000F4957 /* MainVC.swift in Sources */,
 				46030F6C235A6551000F4957 /* AppDelegate.swift in Sources */,
+				46030F87235B6036000F4957 /* Enums.swift in Sources */,
+				46030F84235B52E3000F4957 /* AddTalkVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +396,7 @@
 		};
 		46030F7B235A6562000F4957 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA34F0186407976418C60B7C /* Pods-iTalk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +415,7 @@
 		};
 		46030F7C235A6562000F4957 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F50BAC05D8D71C34AB76A3B /* Pods-iTalk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

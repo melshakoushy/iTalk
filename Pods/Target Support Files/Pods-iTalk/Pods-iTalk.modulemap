@@ -1,0 +1,6 @@
+framework module Pods_iTalk {
+  umbrella header "Pods-iTalk-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+let TALKS_REF = "talks"
+
+let CATEGORY = "category"
+let NUM_COMMENTS = "numComments"
+let NUM_LIKES = "numLikes"
+let TIMESTAMP = "timestamp"
+let TALK_TXT = "talksTxt"
+let USERNAME = "username"
+
