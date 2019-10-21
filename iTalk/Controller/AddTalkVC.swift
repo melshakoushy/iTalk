@@ -12,10 +12,10 @@ import Firebase
 class AddTalkVC: UIViewController, UITextViewDelegate {
 
     //Outlets
-    @IBOutlet weak var postBtn: UIButton!
-    @IBOutlet weak var talkTxt: UITextView!
-    @IBOutlet weak var userNameTxt: UITextField!
-    @IBOutlet weak var segmentedCategories: UISegmentedControl!
+    @IBOutlet private weak var postBtn: UIButton!
+    @IBOutlet private weak var talkTxt: UITextView!
+    @IBOutlet private weak var userNameTxt: UITextField!
+    @IBOutlet private weak var segmentedCategories: UISegmentedControl!
   
     //Variables
     private var selectedCategory = TalkCategory.funny.rawValue

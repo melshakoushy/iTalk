@@ -9,6 +9,7 @@
 import Foundation
 
 let TALKS_REF = "talks"
+let USERS_REF = "users"
 
 let CATEGORY = "category"
 let NUM_COMMENTS = "numComments"
@@ -16,4 +17,5 @@ let NUM_LIKES = "numLikes"
 let TIMESTAMP = "timestamp"
 let TALK_TXT = "talksTxt"
 let USERNAME = "username"
+let DATE_CREATED = "datecreated"
 

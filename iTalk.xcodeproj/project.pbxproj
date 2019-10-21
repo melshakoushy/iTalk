@@ -16,6 +16,10 @@
 		46030F84235B52E3000F4957 /* AddTalkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46030F83235B52E3000F4957 /* AddTalkVC.swift */; };
 		46030F87235B6036000F4957 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46030F86235B6036000F4957 /* Enums.swift */; };
 		46030F89235B65E7000F4957 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46030F88235B65E7000F4957 /* Constants.swift */; };
+		46030F8B235C5CDE000F4957 /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46030F8A235C5CDE000F4957 /* Talk.swift */; };
+		46030F8D235C5F27000F4957 /* TalkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46030F8C235C5F27000F4957 /* TalkCell.swift */; };
+		46030F8F235DA1B4000F4957 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46030F8E235DA1B4000F4957 /* LoginVC.swift */; };
+		46030F91235DA1DA000F4957 /* CreateUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46030F90235DA1DA000F4957 /* CreateUserVC.swift */; };
 		D539B550DBC752AEC5A0F042 /* Pods_iTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F78267263C87089D0C8C50D8 /* Pods_iTalk.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +35,10 @@
 		46030F83235B52E3000F4957 /* AddTalkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTalkVC.swift; sourceTree = "<group>"; };
 		46030F86235B6036000F4957 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		46030F88235B65E7000F4957 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		46030F8A235C5CDE000F4957 /* Talk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
+		46030F8C235C5F27000F4957 /* TalkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkCell.swift; sourceTree = "<group>"; };
+		46030F8E235DA1B4000F4957 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		46030F90235DA1DA000F4957 /* CreateUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserVC.swift; sourceTree = "<group>"; };
 		9F50BAC05D8D71C34AB76A3B /* Pods-iTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTalk.release.xcconfig"; path = "Target Support Files/Pods-iTalk/Pods-iTalk.release.xcconfig"; sourceTree = "<group>"; };
 		DA34F0186407976418C60B7C /* Pods-iTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTalk.debug.xcconfig"; path = "Target Support Files/Pods-iTalk/Pods-iTalk.debug.xcconfig"; sourceTree = "<group>"; };
 		F78267263C87089D0C8C50D8 /* Pods_iTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +96,8 @@
 			children = (
 				46030F6D235A6551000F4957 /* MainVC.swift */,
 				46030F83235B52E3000F4957 /* AddTalkVC.swift */,
+				46030F8E235DA1B4000F4957 /* LoginVC.swift */,
+				46030F90235DA1DA000F4957 /* CreateUserVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -95,6 +105,7 @@
 		46030F80235B5246000F4957 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				46030F8C235C5F27000F4957 /* TalkCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -102,6 +113,7 @@
 		46030F81235B524E000F4957 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				46030F8A235C5CDE000F4957 /* Talk.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -248,11 +260,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46030F8D235C5F27000F4957 /* TalkCell.swift in Sources */,
 				46030F89235B65E7000F4957 /* Constants.swift in Sources */,
+				46030F8F235DA1B4000F4957 /* LoginVC.swift in Sources */,
 				46030F6E235A6551000F4957 /* MainVC.swift in Sources */,
 				46030F6C235A6551000F4957 /* AppDelegate.swift in Sources */,
 				46030F87235B6036000F4957 /* Enums.swift in Sources */,
+				46030F91235DA1DA000F4957 /* CreateUserVC.swift in Sources */,
 				46030F84235B52E3000F4957 /* AddTalkVC.swift in Sources */,
+				46030F8B235C5CDE000F4957 /* Talk.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
