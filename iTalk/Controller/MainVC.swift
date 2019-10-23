@@ -110,10 +110,29 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "talkCell", for: indexPath) as? TalkCell {
-            cell.configureCell(talk: talks[indexPath.row])
+            cell.configureCell(talk: talks[indexPath.row], delegate: self)
             return cell
         } else {
             return UITableViewCell()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toComments", sender: talks[indexPath.row])
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toComments" {
+            if let destinationVC = segue.destination as? CommentsVC {
+                if let talk = sender as? Talk {
+                    destinationVC.talk = talk
+                }
+            }
+        }
+    }
+}
+
+extension MainVC: TalkDelegate {
+    func talkOptiosTapped(talk: Talk) {
+        
     }
 }

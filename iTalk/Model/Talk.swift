@@ -16,14 +16,16 @@ class Talk {
     private(set) var numComments: Int!
     private(set) var numLikes: Int!
     private(set) var documentId: String!
+    private(set) var userId: String!
     
-    init(username: String, timestamp: Date, talkTxt: String, numComments: Int, numLikes: Int, documentId: String) {
+    init(username: String, timestamp: Date, talkTxt: String, numComments: Int, numLikes: Int, documentId: String, userId: String) {
         self.username = username
         self.timestamp = timestamp
         self.talkTxt = talkTxt
         self.numComments = numComments
         self.numLikes = numLikes
         self.documentId = documentId
+        self.userId = userId
     }
     
     class func parseData(snapshot: QuerySnapshot?) -> [Talk]{
@@ -37,8 +39,9 @@ class Talk {
             let talkTxt = data[TALK_TXT] as? String ?? ""
             let numLikes = data[NUM_LIKES] as? Int ?? 0
             let documentId = document.documentID
+            let userId = data[USER_ID] as? String ?? ""
             
-            let newTalk = Talk(username: username, timestamp: timestamp, talkTxt: talkTxt, numComments: numComments, numLikes: numLikes, documentId: documentId)
+            let newTalk = Talk(username: username, timestamp: timestamp, talkTxt: talkTxt, numComments: numComments, numLikes: numLikes, documentId: documentId, userId: userId)
             talks.append(newTalk)
         }
         

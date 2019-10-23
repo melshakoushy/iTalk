@@ -9,6 +9,10 @@
 import UIKit
 import Firebase
 
+protocol TalkDelegate {
+    func talkOptiosTapped(talk: Talk)
+}
+
 class TalkCell: UITableViewCell {
     
     // Outlets
@@ -18,9 +22,11 @@ class TalkCell: UITableViewCell {
     @IBOutlet weak var timestampLbl: UILabel!
     @IBOutlet weak var talkTxtLbl: UILabel!
     @IBOutlet weak var commentsLbl: UILabel!
+    @IBOutlet weak var optionsMenu: UIImageView!
     
     // Variables
     private var talk:Talk!
+    private var delegate: TalkDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,16 +40,30 @@ class TalkCell: UITableViewCell {
             .setData([NUM_LIKES : talk.numLikes + 1], merge: true)
     }
     
-    func configureCell(talk: Talk) {
+    func configureCell(talk: Talk, delegate: TalkDelegate?) {
+        optionsMenu.isHidden = true
         self.talk = talk
+        self.delegate = delegate
         userNameLbl.text = talk.username
         talkTxtLbl.text = talk.talkTxt
         likesLbl.text = String(talk.numLikes)
         commentsLbl.text = String(talk.numComments)
+        
         let formatter = DateFormatter()
         formatter.dateFormat = "MMM d, hh:mm"
         let timestamp = formatter.string(from: talk.timestamp)
         timestampLbl.text = timestamp
+        
+        if talk.userId == Auth.auth().currentUser?.uid {
+            optionsMenu.isHidden = false
+            optionsMenu.isUserInteractionEnabled = true
+            let tap = UITapGestureRecognizer(target: self, action: #selector(talkOptionsTapped))
+            optionsMenu.addGestureRecognizer(tap)
+        }
+    }
+    
+    @objc func talkOptionsTapped() {
+        delegate?.talkOptiosTapped(talk: talk)
     }
 
 }

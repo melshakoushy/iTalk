@@ -23,7 +23,6 @@ class LoginVC: UIViewController {
         emailTxt.layer.cornerRadius = 10
         loginBtn.layer.cornerRadius = 10
         signUpBtn.layer.cornerRadius = 10
-        
     }
     
     @IBAction func loginBtnPressed(_ sender: Any) {

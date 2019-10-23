@@ -20,6 +20,11 @@
 		46030F8D235C5F27000F4957 /* TalkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46030F8C235C5F27000F4957 /* TalkCell.swift */; };
 		46030F8F235DA1B4000F4957 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46030F8E235DA1B4000F4957 /* LoginVC.swift */; };
 		46030F91235DA1DA000F4957 /* CreateUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46030F90235DA1DA000F4957 /* CreateUserVC.swift */; };
+		46030F93235EEADC000F4957 /* CommentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46030F92235EEADC000F4957 /* CommentsVC.swift */; };
+		46030F95235EFA63000F4957 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46030F94235EFA63000F4957 /* CommentCell.swift */; };
+		46030F97235EFCFE000F4957 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46030F96235EFCFE000F4957 /* Comment.swift */; };
+		46030F99235F29D5000F4957 /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46030F98235F29D5000F4957 /* KeyboardBoundView.swift */; };
+		46030F9B23606AD9000F4957 /* UpdateCommentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46030F9A23606AD9000F4957 /* UpdateCommentVC.swift */; };
 		D539B550DBC752AEC5A0F042 /* Pods_iTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F78267263C87089D0C8C50D8 /* Pods_iTalk.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +44,11 @@
 		46030F8C235C5F27000F4957 /* TalkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkCell.swift; sourceTree = "<group>"; };
 		46030F8E235DA1B4000F4957 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		46030F90235DA1DA000F4957 /* CreateUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserVC.swift; sourceTree = "<group>"; };
+		46030F92235EEADC000F4957 /* CommentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsVC.swift; sourceTree = "<group>"; };
+		46030F94235EFA63000F4957 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		46030F96235EFCFE000F4957 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		46030F98235F29D5000F4957 /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
+		46030F9A23606AD9000F4957 /* UpdateCommentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCommentVC.swift; sourceTree = "<group>"; };
 		9F50BAC05D8D71C34AB76A3B /* Pods-iTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTalk.release.xcconfig"; path = "Target Support Files/Pods-iTalk/Pods-iTalk.release.xcconfig"; sourceTree = "<group>"; };
 		DA34F0186407976418C60B7C /* Pods-iTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTalk.debug.xcconfig"; path = "Target Support Files/Pods-iTalk/Pods-iTalk.debug.xcconfig"; sourceTree = "<group>"; };
 		F78267263C87089D0C8C50D8 /* Pods_iTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +108,8 @@
 				46030F83235B52E3000F4957 /* AddTalkVC.swift */,
 				46030F8E235DA1B4000F4957 /* LoginVC.swift */,
 				46030F90235DA1DA000F4957 /* CreateUserVC.swift */,
+				46030F92235EEADC000F4957 /* CommentsVC.swift */,
+				46030F9A23606AD9000F4957 /* UpdateCommentVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -106,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				46030F8C235C5F27000F4957 /* TalkCell.swift */,
+				46030F94235EFA63000F4957 /* CommentCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -114,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				46030F8A235C5CDE000F4957 /* Talk.swift */,
+				46030F96235EFCFE000F4957 /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -123,6 +137,7 @@
 			children = (
 				46030F86235B6036000F4957 /* Enums.swift */,
 				46030F88235B65E7000F4957 /* Constants.swift */,
+				46030F98235F29D5000F4957 /* KeyboardBoundView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -261,10 +276,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				46030F8D235C5F27000F4957 /* TalkCell.swift in Sources */,
+				46030F9B23606AD9000F4957 /* UpdateCommentVC.swift in Sources */,
 				46030F89235B65E7000F4957 /* Constants.swift in Sources */,
 				46030F8F235DA1B4000F4957 /* LoginVC.swift in Sources */,
+				46030F95235EFA63000F4957 /* CommentCell.swift in Sources */,
+				46030F99235F29D5000F4957 /* KeyboardBoundView.swift in Sources */,
 				46030F6E235A6551000F4957 /* MainVC.swift in Sources */,
+				46030F93235EEADC000F4957 /* CommentsVC.swift in Sources */,
 				46030F6C235A6551000F4957 /* AppDelegate.swift in Sources */,
+				46030F97235EFCFE000F4957 /* Comment.swift in Sources */,
 				46030F87235B6036000F4957 /* Enums.swift in Sources */,
 				46030F91235DA1DA000F4957 /* CreateUserVC.swift in Sources */,
 				46030F84235B52E3000F4957 /* AddTalkVC.swift in Sources */,
