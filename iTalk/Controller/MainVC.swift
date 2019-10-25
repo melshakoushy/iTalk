@@ -100,6 +100,28 @@ class MainVC: UIViewController {
             }
         }
     }
+    func delete(collection: CollectionReference, batchSize: Int = 100, completion: @escaping (Error?) -> ()) {
+        collection.limit(to: batchSize).getDocuments { (docset, error) in
+            guard let docset = docset else {
+                completion(error)
+                return
+            }
+            guard docset.count > 0 else {
+                completion(nil)
+                return
+            }
+            
+            let batch = collection.firestore.batch()
+            docset.documents.forEach { batch.deleteDocument($0.reference) }
+            batch.commit(completion: { (batchError) in
+                if let batchError = batchError {
+                    completion(batchError)
+                } else {
+                    self.delete(collection: collection, batchSize: batchSize, completion: completion)
+                }
+            })
+        }
+    }
 }
 
 extension MainVC: UITableViewDelegate, UITableViewDataSource {
@@ -133,6 +155,25 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
 
 extension MainVC: TalkDelegate {
     func talkOptiosTapped(talk: Talk) {
-        
+        let alert = UIAlertController(title: "Delete", message: "Do you want to delete your talk?", preferredStyle: .actionSheet)
+        let deleteAction = UIAlertAction(title: "Delete", style: .default) { (action) in
+            self.delete(collection: Firestore.firestore().collection(TALKS_REF).document(talk.documentId).collection(COMMENTS_REF), completion: { (error) in
+                if let error = error {
+                    debugPrint("Error deleting subcollections\(error.localizedDescription)")
+                } else {
+                    Firestore.firestore().collection(TALKS_REF).document(talk.documentId).delete(completion: { (error) in
+                        if let error = error {
+                            debugPrint("Error deleting talk\(error.localizedDescription)")
+                        } else {
+                            alert.dismiss(animated: true, completion: nil)
+                        }
+                    })
+                }
+            })
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(deleteAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
     }
 }

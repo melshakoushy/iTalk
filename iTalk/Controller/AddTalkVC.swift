@@ -14,7 +14,6 @@ class AddTalkVC: UIViewController, UITextViewDelegate {
     //Outlets
     @IBOutlet private weak var postBtn: UIButton!
     @IBOutlet private weak var talkTxt: UITextView!
-    @IBOutlet private weak var userNameTxt: UITextField!
     @IBOutlet private weak var segmentedCategories: UISegmentedControl!
   
     //Variables
@@ -23,7 +22,6 @@ class AddTalkVC: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         postBtn.layer.cornerRadius = 4
-        userNameTxt.layer.cornerRadius = 4
         talkTxt.text = "My random talk!"
         talkTxt.textColor = UIColor.lightGray
         talkTxt.delegate = self
@@ -35,14 +33,13 @@ class AddTalkVC: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func postBtnPressed(_ sender: Any) {
-        guard let username = userNameTxt.text else { return}
         Firestore.firestore().collection(TALKS_REF).addDocument(data: [
             CATEGORY : selectedCategory,
             NUM_COMMENTS : 0,
             NUM_LIKES : 0,
             TALK_TXT : talkTxt.text,
             TIMESTAMP : FieldValue.serverTimestamp(),
-            USERNAME : username,
+            USERNAME : Auth.auth().currentUser?.displayName ?? "Anonymous",
             USER_ID : Auth.auth().currentUser?.uid ?? ""
         ]) { (err) in
             if let err = err {

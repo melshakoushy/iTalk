@@ -542,17 +542,8 @@
                                     <action selector="categoriesChanged:" destination="GIO-VM-dh7" eventType="valueChanged" id="ZIM-Wg-cPG"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UHc-GJ-gEx">
-                                <rect key="frame" x="20" y="124" width="335" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="IAs-va-ve0"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Pg8-el-Gzy">
-                                <rect key="frame" x="20" y="159" width="335" height="100"/>
+                                <rect key="frame" x="20" y="130" width="335" height="100"/>
                                 <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="v79-T5-dAh"/>
@@ -561,7 +552,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ih5-m2-s1X">
-                                <rect key="frame" x="142.5" y="269" width="90" height="40"/>
+                                <rect key="frame" x="142.5" y="240" width="90" height="40"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.50980392159999999" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="agD-SG-ZB8"/>
@@ -579,12 +570,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2En-iK-EIt" firstAttribute="top" secondItem="P7h-ZZ-0MM" secondAttribute="top" constant="15" id="Glu-SU-TUA"/>
-                            <constraint firstItem="Pg8-el-Gzy" firstAttribute="top" secondItem="UHc-GJ-gEx" secondAttribute="bottom" constant="10" id="Op5-fQ-omJ"/>
+                            <constraint firstItem="Pg8-el-Gzy" firstAttribute="top" secondItem="2En-iK-EIt" secondAttribute="bottom" constant="16" id="LTY-yc-rWX"/>
                             <constraint firstItem="P7h-ZZ-0MM" firstAttribute="trailing" secondItem="2En-iK-EIt" secondAttribute="trailing" constant="20" id="b11-HR-d9m"/>
                             <constraint firstItem="Ih5-m2-s1X" firstAttribute="top" secondItem="Pg8-el-Gzy" secondAttribute="bottom" constant="10" id="c72-ME-fEU"/>
-                            <constraint firstItem="P7h-ZZ-0MM" firstAttribute="trailing" secondItem="UHc-GJ-gEx" secondAttribute="trailing" constant="20" id="cqa-7z-pbB"/>
-                            <constraint firstItem="UHc-GJ-gEx" firstAttribute="leading" secondItem="P7h-ZZ-0MM" secondAttribute="leading" constant="20" id="ehM-bT-hYG"/>
-                            <constraint firstItem="UHc-GJ-gEx" firstAttribute="top" secondItem="2En-iK-EIt" secondAttribute="bottom" constant="10" id="h7k-uy-cC2"/>
                             <constraint firstItem="2En-iK-EIt" firstAttribute="leading" secondItem="P7h-ZZ-0MM" secondAttribute="leading" constant="20" id="n2S-as-FcN"/>
                             <constraint firstItem="Ih5-m2-s1X" firstAttribute="centerX" secondItem="Wle-qK-ZAX" secondAttribute="centerX" id="nhp-JI-U1p"/>
                             <constraint firstItem="Pg8-el-Gzy" firstAttribute="leading" secondItem="P7h-ZZ-0MM" secondAttribute="leading" constant="20" id="paC-gf-GDD"/>
@@ -596,7 +584,6 @@
                         <outlet property="postBtn" destination="Ih5-m2-s1X" id="Ia8-Ix-mEw"/>
                         <outlet property="segmentedCategories" destination="2En-iK-EIt" id="QKd-cc-BLw"/>
                         <outlet property="talkTxt" destination="Pg8-el-Gzy" id="nfx-Yy-z26"/>
-                        <outlet property="userNameTxt" destination="UHc-GJ-gEx" id="Qv2-hi-mcJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TN6-we-7B4" userLabel="First Responder" sceneMemberID="firstResponder"/>
